@@ -27,7 +27,7 @@ $(function() {
     // Example button
     $("#exampleButton").click(function() {
         $.ajax({
-            url: "/example.txt",
+            url: "/assets/misc/example.txt",
             dataType: "text",
             success: function (data) {
                 $formatInput.val(data);

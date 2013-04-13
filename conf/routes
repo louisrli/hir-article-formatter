@@ -7,5 +7,4 @@ GET     /                           controllers.Application.index
 POST    /                           controllers.Application.reformat
 
 # Map static resources from the /public folder to the /assets URL path
-GET     /example.txt                controllers.Assets.at(path="/public", file="/misc/example.txt")
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
