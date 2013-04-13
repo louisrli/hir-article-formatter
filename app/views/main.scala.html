@@ -1,0 +1,18 @@
+@(title: String)(content: Html)
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>@title</title>
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/bootstrap.min.css")">
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
+        <script src="@routes.Assets.at("javascripts/jquery-1.7.1.min.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.at("javascripts/ZeroClipboard.min.js")" type="text/javascript"></script>
+        <script>ZeroClipboard.setDefaults( { moviePath: "@routes.Assets.at("misc/ZeroClipboard.swf")" } );</script>
+        <script src="@routes.Assets.at("javascripts/reformatter.js")" type="text/javascript"></script>
+    </head>
+    <body>
+        @content
+    </body>
+</html>

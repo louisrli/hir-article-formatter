@@ -1,0 +1,40 @@
+@(reformatForm: Form[String])
+
+@import helper._
+
+@main("HIR Article Formatter") {
+
+<div class="container">
+<div class="row">
+  <div class="span12">
+    <h2>Article Text</h2>
+
+    @helper.form(action = routes.Application.reformat, 'id -> "formatForm") {
+    <textarea name="formatText" id="formatText"
+              class="input-block-level" rows="15"
+              style="resize:none; font-family:monospace"></textarea>
+    <input type="submit" class="btn btn-primary" id="formatSubmit" value="Reformat"/>
+    <input type="button" class="btn" id="exampleButton" value="Try an example"/>
+    }
+
+  </div>
+</div>
+
+<h2>Reformatted Article</h2>
+<div><a href="#" class="btn btn-small" data-clipboard-target="outputBox" id="copyClipboardBtn">Copy to clipboard</a><br/><br/>
+
+<small><strong>Note:</strong> Due to browser limitations, this will cause the copied text to on one line (no spaces between lines).<br/ > You can also manually copy the text to preserve the spaces between lines.</small>
+</div>
+
+<br />
+
+<div class="well" style="font-family:monospace" id="outputBox">
+Add your article text to the box above.
+</div>
+
+<div>
+<small>Report bugs, questions, suggestions to <a href="mailto:louisli@@college.harvard.edu">ll</a>.</small>
+</div>
+</div>
+
+}
